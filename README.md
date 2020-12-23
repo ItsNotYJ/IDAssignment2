@@ -18,6 +18,15 @@ Lastly, I have more or less set up the template to be used for my README.md (To 
 * Successfully retrieved spotify token from the API
 * Figured out how to retrieve value from async function
 
+## Commit 1.1
+I added additional GET fetch requests for getting a user's spotify profile, a user's playlists, a artist's profile, tracks from the artist's album. I set a limit to the number of playlists I can display in case I do add more in the future.
+
+I have yet to start on the html base nor css. Right now i'm still messing around with the API and checking if each function created works and generates the correct data required. If any issues, it will be fixed by commit 1.2.
+
+#### General Summary:
+* Added required spotify fetch requests/functions
+* Testing and fixing errors for each fetch request to be done by commit 1.2
+
 ## Features:
 ### TBA:
 * 
