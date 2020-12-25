@@ -1,3 +1,4 @@
+/* Page Styling Reset */
 * {
     top: 0;
     left: 0;
@@ -6,4 +7,131 @@
     
     font-family: 'Bebas Neue', cursive;
     font-size: 25px;
+}
+
+/* Home Page CSS */
+
+#navText {
+    color: white;
+    transition: 0.15s ease-in;
+    padding-left: 50px;
+}
+
+#navBrand {
+    color: white;
+    transition: 0.15s ease-in;
+}
+
+#navText:hover {
+    color: rgb(107, 68, 242);
+}
+
+#navBrand:hover {
+    color: rgb(107, 68, 242);
+}
+
+.homeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.homeInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 50%;
+    height: 40%;
+    background-color: rgb(0,0,0, 0.5);
+    border-radius: 60px;
+}
+
+.homeBody {
+    background-image: url('homeIMG/pic1.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.homeImgTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: 100%;
+    width: 70%;
+
+    color: rgb(206, 203, 203);
+    transition: 0.3s ease;
+
+    /* Animation */
+
+}
+
+/* Responsiveness */
+/* For Ipad Pro Responsiveness*/
+@media screen and (max-width: 1024px) {
+    #navText {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .homeImgTitle {
+        font-size: 50px;
+    }
+
+    .homeInner {
+        height: 28%;
+    }
+}
+
+/* For Bootstrap Responsiveness */
+@media screen and (max-width: 991px) {
+    #navText {
+        text-align: center;
+        padding: 0px;
+        font-size: 20px;
+    }
+
+    .homeImgTitle {
+        font-size: 30px;
+    }
+}
+
+/* For Ipad Responsiveness */
+@media screen and (max-width: 768px) {
+    .homeBody {
+        background-image: url('homeIMG/pic2.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .homeImgTitle {
+        font-size: 35px;
+    }
+
+    .homeInner {
+        height: 23%;
+        border-radius: 35px;
+    }
+}
+
+/* For any other smaller devices */
+@media screen and (max-width: 700px) {
+    .homeBody {
+        background-image: url('homeIMG/pic2.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .homeImgTitle {
+        font-size: 20px;
+    }
+
+    .homeInner {
+        height: 25%;
+        border-radius: 35px;
+    }
 }

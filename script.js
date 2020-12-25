@@ -99,4 +99,13 @@ async function RunAsync() {
 
 }
 
+// Text Animation
+const anText = baffle('.homeImgTitle');
+anText.set({
+    characters: '>██ ░▒▒▓█ <▓<█▓ >█> <▓░▓> █▓░░ ▒░▒ ▓▒░▒ ▒█░▒',
+    speed: 150
+});
+anText.start();
+anText.reveal(4000);
+
 // Run the main function

@@ -36,6 +36,13 @@ Lastly, I made a simple navbar where I plan on refining it and making it look ni
 * Checked all fetch requests
 * Made a simple navigation bar with bootstrap
 
+## Commit 1.3
+So I have completed the whole of the home page with the background image and image title all coded. I have also done the responsiveness for the home page so as to save time when moving on the future pages. I refined the navbar a slight bit by making it fixed-top so it will follow as the user scrolls. I intend to animate the image title text with javascript by commit 1.4.
+
+#### General Summary:
+* Finished home page
+* Made home page responsive
+
 ## Features:
 ### TBA:
 * 
