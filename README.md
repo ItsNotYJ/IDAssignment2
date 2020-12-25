@@ -27,6 +27,15 @@ I have yet to start on the html base nor css. Right now i'm still messing around
 * Added required spotify fetch requests/functions
 * Testing and fixing errors for each fetch request to be done by commit 1.2
 
+## Commit 1.2
+So I checked all the fetch functions and they all are able to acquire the data I need to display on the pages. I also created the extra htmls for the other pages that I need. Plus in the css file, I did the basic lines to reset the page so that there's nothing bothering the raw html code and other css code.
+
+Lastly, I made a simple navbar where I plan on refining it and making it look nicer.
+
+#### General Summary:
+* Checked all fetch requests
+* Made a simple navigation bar with bootstrap
+
 ## Features:
 ### TBA:
 * 
