@@ -57,6 +57,17 @@ Now I have started on the about me page. I have added the main background image 
 #### General Summary:
 * Added base layer of about page
 
+## Commit 2.1
+I have added the image carousel to showcase a few images of me and some of the few things that I enjoy doing. I also formatted it so that its all centred with slide control for the user to look at the pictures with their own control. Similarly, I decreased the interval timing so that it won't take to long to showcase all the pictures.
+
+I may plan to add more pictures in the future but for now this will do. I plan to add my self portrait in the next commit. Plus for the background image, i made it parallax but I have yet to do it in the responsiveness.
+
+#### General Summary:
+* Added image carousel
+* Formatted the carousel and positioning of the carousel
+* Modified image slide interval and shortened it
+* Background image made parallax
+
 ## Features:
 ### TBA:
 * 
