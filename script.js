@@ -96,16 +96,6 @@ async function RunAsync() {
     // const artistDeanTrack = await GetTrack(token, albumID1).catch(error => console.error(error));
     // const artistZicoTrack = await GetTrack(token, albumID2).catch(error => console.error(error));
     // const artistEricTrack = await GetTrack(token, albumID3).catch(error => console.error(error));
-
 }
 
-// Text Animation
-const anText = baffle('.homeImgTitle');
-anText.set({
-    characters: '>██ ░▒▒▓█ <▓<█▓ >█> <▓░▓> █▓░░ ▒░▒ ▓▒░▒ ▒█░▒',
-    speed: 150
-});
-anText.start();
-anText.reveal(4000);
-
-// Run the main function
+// Run the functions

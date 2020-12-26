@@ -77,6 +77,16 @@ I also played around with the background dim, but i'll be adding text animations
 * Added self portrait/profile picture
 * Adjusted background dim
 
+## Commit 2.3
+I changed the format of the about me text a bit and added a glitch effect to the titles of the text and carousel. I learned how to do this by watching a video where it used CSS to create effects and shift the text. It's very cool, I'll credit the video in my references, I'll definitely want to use it in the future as well.
+
+Also, I finished the responsiveness for the page, so officially the about page is completed. However, I'm still considering if I should add my hobbies and other information under this page or should I create additional pages to display those information, I will probably decide on this when I finish the other main pages.
+
+#### General Summary:
+* Finished Responsiveness
+* Added glitch effect to the text title and carousel title
+* Dilemma on where to display additional information
+
 ## Features:
 ### TBA:
 * 
