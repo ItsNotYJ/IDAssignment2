@@ -51,6 +51,12 @@ Animated the image title text and also changed the font to poppins to make it re
 * Changed home image title font to Poppins
 * Adjusted the responsiveness in css for the new font
 
+## Commit 2.0
+Now I have started on the about me page. I have added the main background image for the page with a slight black dim to make the text easier to read. I have laid out the basic texts and headers I need before adding my image carousel and self portrait.
+
+#### General Summary:
+* Added base layer of about page
+
 ## Features:
 ### TBA:
 * 
