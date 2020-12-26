@@ -43,6 +43,14 @@ So I have completed the whole of the home page with the background image and ima
 * Finished home page
 * Made home page responsive
 
+## Commit 1.4
+Animated the image title text and also changed the font to poppins to make it resemble a programming language font. This is just a small representation of what I do like programming and the video game vibes of the home background.
+
+#### General Summary:
+* Animated home image title
+* Changed home image title font to Poppins
+* Adjusted the responsiveness in css for the new font
+
 ## Features:
 ### TBA:
 * 
