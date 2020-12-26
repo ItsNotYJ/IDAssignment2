@@ -68,6 +68,15 @@ I may plan to add more pictures in the future but for now this will do. I plan t
 * Modified image slide interval and shortened it
 * Background image made parallax
 
+## Commit 2.2
+Now I have added my self portrait with a text overlay where when users hover over the picture it shows my information. With a bit of border radius to make it look more like a profile picture as well.
+
+I also played around with the background dim, but i'll be adding text animations soon so I may have to adjust again after. I'll deal with the page responsiveness in the next commit as well.
+
+#### General Summary:
+* Added self portrait/profile picture
+* Adjusted background dim
+
 ## Features:
 ### TBA:
 * 
