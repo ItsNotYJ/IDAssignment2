@@ -119,6 +119,13 @@ I felt that with the progress bars, its easier to read and tell how far I have p
 * Added skills section
 * Used Boostrap Progress Bars for skills section
 
+## Commit 3.3
+This is just a commit where I clean up my file organization as well as touch up on some of my responsiveness code for the assignment checkpoint.
+
+#### General Summary:
+* Slight touch up of code for assignment checkpoint
+* Re-organized file structure to make folder neater
+
 ## Features:
 ### TBA:
 * Popup Alert/Notification users to choose for reduced motion on webpage

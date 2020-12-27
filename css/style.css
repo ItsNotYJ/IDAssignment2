@@ -51,7 +51,7 @@
 }
 
 .homeBody {
-    background-image: url('homeIMG/pic1.gif');
+    background-image: url('../homeIMG/pic1.gif');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -79,7 +79,7 @@
 
 /* About Page CSS */
 .aboutBody {
-    background-image: url('aboutIMG/background.gif');
+    background-image: url('../aboutIMG/background.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -243,7 +243,7 @@
 
 /* Accolade Page CSS */
 .accoladesBody {
-    background-image: url('accoladesIMG/background.gif');
+    background-image: url('../accoladesIMG/background.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -636,6 +636,9 @@
     width: 60%;
 }
 
+/* Follow Me Page CSS */
+
+
 /* Responsiveness */
 /* For Ipad Pro Responsiveness*/
 @media screen and (max-width: 1024px) {
@@ -666,12 +669,12 @@
         width: 100%;
     }
 
-    .aboutTitle {
+    .title {
         margin-top: 30px;
         font-size: 80px;
     }
 
-    .aboutTitle > span {
+    .title > span {
         font-size: 80px;
     }
 
@@ -704,7 +707,7 @@
 @media screen and (max-width: 768px) {
     /* Home Page Responsiveness */
     .homeBody {
-        background-image: url('homeIMG/pic2.gif');
+        background-image: url('../homeIMG/pic2.gif');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -728,12 +731,12 @@
         width: 100%;
     }
 
-    .aboutTitle {
+    .title {
         margin-top: 30px;
         font-size: 60px;
     }
 
-    .aboutTitle > span {
+    .title > span {
         font-size: 60px;
     }
 
@@ -752,7 +755,7 @@
 /* For any other smaller devices */
 @media screen and (max-width: 700px) {
     .homeBody {
-        background-image: url('homeIMG/pic2.gif');
+        background-image: url('../homeIMG/pic2.gif');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -780,12 +783,12 @@
         width: 90%;
     }
 
-    .aboutTitle {
+    .title {
         margin-top: 20px;
         font-size: 40px;
     }
 
-    .aboutTitle > span {
+    .title > span {
         font-size: 40px;
     }
 
