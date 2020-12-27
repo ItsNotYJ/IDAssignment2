@@ -83,36 +83,100 @@ I changed the format of the about me text a bit and added a glitch effect to the
 Also, I finished the responsiveness for the page, so officially the about page is completed. However, I'm still considering if I should add my hobbies and other information under this page or should I create additional pages to display those information, I will probably decide on this when I finish the other main pages.
 
 #### General Summary:
-* Finished Responsiveness
+* Finished Responsiveness for about page
 * Added glitch effect to the text title and carousel title
 * Dilemma on where to display additional information
 
+## Commit 3.0
+I forgot to mention that I created a seperate js file for text animations and stuff so that I won't have to mix the functions and disrupt the flow. Plus it helps with the asynchronous loading as well. So first off, for the accolade page I have added my favourite memmories section and formatted it accordingly. I think that i'll likely use the glitch effect animation for titles which makes it more constant throughout the pages isntead of using multiple different animations.
+
+I did end up changing the file name for experiences to accolades as I felt that it was a better representation of what was going to be displayed on that page. I won't do animations for this page yet, I'll likely do it near the end of the project. I do hope to add page transitions as well. Lastly, I filled up the other README section accordingly.
+
+#### General Summary:
+* Added glitch effect to titles
+* Completed memories section
+* Added all required pictures
+* Changed file name and all according references accordlingy
+
 ## Features:
 ### TBA:
-* 
-* 
+* Popup Alert/Notification users to choose for reduced motion on webpage
+* Page Animations
+* Text Animations for certain pages
+* Some sort of contact form (Not confirmed)
 
 ### Existing:
-* 
+* Home Page
+* About Page
+* Accolades Page
+* Follow Me Page
+* Spotify API Features
+* Cool External JS Library Text Animations
+* Bootstrap Usage
+* Attractive Background Display for each page
 
-## Technologies Used: (To be linked an description of use)
-* []()
-* []()
+## Technologies Used:
+* [HTML](https://www.w3schools.com/html/)
+    * Language used to code the front-end of the webpage
+* [CSS](https://www.w3schools.com/css/)
+    * Language that was used to perform styling on HTML elements in the project
+* [Javascript](https://www.javascript.com/)
+    * Javascript language used to create interactive hamburger menu for the website
+* [JQuery](https://jquery.com/)
+    * Javascript Library used to improve javascript experience and DOM traversal more efficient.
+* [Bootstrap](https://getbootstrap.com/)
+    * Front-end open source toolkit for HTML, mainly for ease-of use
+* [Visual Studio Code](https://code.visualstudio.com/)
+    * IDE used to code HTML, CSS and JS for the project
+* [Adobe XD](https://www.adobe.com/sea/products/xd.html)
+    * Used Adobe XD to create the wireframe and layout for the website
+* [Normalize css](https://necolas.github.io/normalize.css/)
+    * Normalize.css was used to render all elements more consistently and in line with modern standards
+* [Spotify API](https://developer.spotify.com/documentation/web-api/)
+    * API used to display client spotify information or user information required for the website
 
 ## Testing
 ### For commit 1.0:
 I had an issue trying to retrieve the data from the async function as it kept returning a promise instead of a value when I console log it. After a bit of research I realised that in order to retrieve the value of the async function I need to call the async function inside of another async function, similar to that of wrapping. Though i'm still need super clear on the full reasoning behind this, I at least understand a slight bit more on how to retrieve API values now.
 
-### Web Browsers Tested On:
-* 
-* 
+### Main Web Browsers Tested On:
+* Microsoft Edge
+* Mozilla Firefox
+* Internet Explorer
+* Google Chrome
 
 ## Credits:
 ### Content:
-* []()
+* [W3Schools Parralax](https://www.w3schools.com/howto/howto_css_parallax.asp)
+* [W3Schools BTOA Function](https://www.w3schools.com/jsref/met_win_btoa.asp)
+* [Spotify API Authorization](https://developer.spotify.com/documentation/general/guides/authorization-guide/#authorization-flows)
+* [Spotify API Client Dashboard](https://developer.spotify.com/dashboard/)
+* [Spotify Web API References](https://developer.spotify.com/documentation/web-api/reference-beta/#reference-index)
+* [Bootstrap Navbar](https://getbootstrap.com/docs/5.0/components/navbar/)
+* [Boostrap Carousel](https://getbootstrap.com/docs/5.0/components/carousel/)
+* [Boostrap Progress](https://getbootstrap.com/docs/5.0/components/progress/)
+* [Body.JSON MDN](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
+* [How to display or view fetch promises from async function returns](https://github.com/Keyang/node-csvtojson/issues/278)
+* [Home Page Background Image](https://in.pinterest.com/pin/406027722638256743/)
+* [Home Page Small Device Background Image](https://cutewallpaper.org/download.php?file=/21/pixel-wallpaper-gif/Animated-gif-about-gif-in-wallpaper-by-Iren.gif)
+* [Baffle JS github](https://www.jsdelivr.com/package/npm/baffle)
+* [Baffle.js](https://camwiegert.github.io/baffle/#demo)
+* [Poppins Font](https://fonts.google.com/specimen/Poppins)
+* [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue?preview.text=About&preview.text_type=custom&preview.size=20&sidebar.open=true&selection.family=Bebas+Neue#glyphs)
+* [About Page Background Image](https://www.artstation.com/artwork/GXwZgz)
+* [Accolades Page Background Image](https://www.reddit.com/r/Cyberpunk/comments/93n804/pixelart_by_waneella_for_digitocracy_short_story/)
+* [MBS Award Description](https://www.3blmedia.com/News/Marina-Bay-Sands-Distributes-Youth-Education-Award-Team-Members-Children)
+* [MOE Award Description](https://beta.moe.gov.sg/fees-assistance-awards-scholarships/awards-scholarships/edusave-awards/)
+* [SSSC Award Description](https://www.moe.gov.sg/docs/default-source/document/media/press/2018/singapore-schools-sports-council-colours-awards-2018-annex-a.pdf)
 
 ### Media:
-* []()
+* [How to use fetch](https://www.youtube.com/watch?v=tc8DU14qX6I&ab_channel=TheCodingTrain)
+* [How to use baffle.js](https://www.youtube.com/watch?v=7_VfE4k7h1s&ab_channel=Codegrid)
+* [Glitch Text Animation Tutorial](https://www.youtube.com/watch?v=7Xyg8Ja7dyY&ab_channel=KevinPowell)
 
 ### Acknowledgements:
-* []()
+* [Spotify](https://www.spotify.com/us/)
+* [Boostraps](https://getbootstrap.com/)
+* [W3Schools](https://www.w3schools.com/)
+* [Youtube](https://www.youtube.com/)
+* [Google Fonts](https://fonts.google.com/)
