@@ -386,6 +386,7 @@
 /* Fourth Section */
 .skillsContainer {
     width: 70%;
+    margin-bottom: 3vh;
 }
 
 .innerSkills {

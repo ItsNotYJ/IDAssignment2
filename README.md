@@ -103,10 +103,21 @@ Now I have completed the additional rewards section which showcases the other fe
 
 All the award information/description, I referenced them from the proper websites. Linked under credits/references.
 
-#### General Sumamry:
+#### General Summary:
 * Completed additional awards section
 * Did not include bootstrap cards for various reasons
 * Credited award description pages
+
+## Commit 3.2
+I have completed the whole page except for responsiveness. I added the skills section to showcase my current skills, I do plan on adding on to it in the future as well. The page responsiveness is yet to be completed but it will be done by the next commit. For the skill section, I made use of the progress bars from bootstrap to show how much of that skill I have mastered or understand at this current point in time.
+
+I felt that with the progress bars, its easier to read and tell how far I have progressed instead of me using like percentage or words to describe.
+
+#### General Summary:
+* Completed accolades page
+* Responsiveness to be done by the next commit
+* Added skills section
+* Used Boostrap Progress Bars for skills section
 
 ## Features:
 ### TBA:
