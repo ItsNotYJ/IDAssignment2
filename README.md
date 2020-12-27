@@ -98,6 +98,16 @@ I did end up changing the file name for experiences to accolades as I felt that 
 * Added all required pictures
 * Changed file name and all according references accordlingy
 
+## Commit 3.1
+Now I have completed the additional rewards section which showcases the other few rewards that I have received through my secondary school years that I feel proud of displaying. I kept switching between using bootstrap cards to show the information but in the end I felt that the bootstrap cards weren't really suitable (Not attractive/good looking) and it doesn't fit the vibe of the page or website in general. Just feels out of place thus I didn't use bootstrap cards and just went with normal flexbox layouting.
+
+All the award information/description, I referenced them from the proper websites. Linked under credits/references.
+
+#### General Sumamry:
+* Completed additional awards section
+* Did not include bootstrap cards for various reasons
+* Credited award description pages
+
 ## Features:
 ### TBA:
 * Popup Alert/Notification users to choose for reduced motion on webpage
