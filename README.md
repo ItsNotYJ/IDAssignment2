@@ -126,6 +126,15 @@ This is just a commit where I clean up my file organization as well as touch up 
 * Slight touch up of code for assignment checkpoint
 * Re-organized file structure to make folder neater
 
+## Commit 3.4
+I finished the responsiveness for the accolades page and started on the final page, in terms of html I have included the base divisions and all the neccessary code required for the page to resemble the wireframe mockup. Also, I adjusted a few things about the other responsiveness code of other pages by making the dropdown menu abit more spread out so that it would be easier for the user to tap and interact with it and some name for the skills section changes.
+
+In the next commit I will likely, be messing around with inputting data from the API and javascript.
+ 
+#### General Summary:
+* Finished Accolades responiveness
+* Base HTML for Follow me page done
+
 ## Features:
 ### TBA:
 * Popup Alert/Notification users to choose for reduced motion on webpage
