@@ -637,6 +637,64 @@
 }
 
 /* Follow Me Page CSS */
+.followMeBody {
+    background-image: url('../followIMG/background.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#socialHeader {
+    margin-top: 10vh;
+}
+
+.followContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.socialMedia {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    margin-top: 7vh;
+
+    color: rgba(34, 229, 199, 0.9);
+}
+
+#socialImg {
+    border: 3px solid #fff;
+    border-radius: 100%;
+
+    transition: 0.4s ease;
+}
+
+#socialImg:hover {
+    background-color: rgba(34, 229, 199, 0.5);
+}
+
+.social1 > h4 {
+    margin-top: 2vh;
+    text-align: center;
+    font-size: 30px;
+}
+
+.social2 > h4 {
+    margin-top: 2vh;
+    text-align: center;
+    font-size: 30px;
+}
+
+.social3 > h4 {
+    margin-top: 2vh;
+    text-align: center;
+    font-size: 30px;
+}
+
 
 /* Responsiveness */
 

@@ -88,7 +88,9 @@ async function RunAsync() {
     // To retrieve the value of the token from the promise and process its use
     const token = await GetToken(clientID, clientSecret, token_url).catch(error => console.error(error));
     
-    // const myUserData = await GetUsers(token, myUserID).catch(error => console.error(error));
+    const myUserData = await GetUsers(token, myUserID).catch(error => console.error(error));
+    console.log(myUserData);
+    
     // const myUserPlaylists = await GetUserPlaylist(token, myUserID).catch(error => console.error(error));
     // const artistDean = await GetArtist(token, deanID).catch(error => console.error(error));
     // const artistZico = await GetArtist(token, zicoID).catch(error => console.error(error));

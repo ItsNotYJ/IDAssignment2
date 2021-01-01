@@ -135,6 +135,12 @@ In the next commit I will likely, be messing around with inputting data from the
 * Finished Accolades responiveness
 * Base HTML for Follow me page done
 
+## Commit 3.5
+Finished the first section of the follow me page, all the social media pages are linked accordingly with a slight border design. The icons are pretty unique and they fit the theme of the website pretty well too. I may decide to change the overlay colour and the text colours in the future as the colour scheme still feels slighty off.
+
+#### General Summary:
+* Finished social media section of follow me page
+
 ## Features:
 ### TBA:
 * Popup Alert/Notification users to choose for reduced motion on webpage
