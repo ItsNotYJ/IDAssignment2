@@ -645,6 +645,8 @@
     background-position: center;
 }
 
+/* Section 1 */
+
 #socialHeader {
     margin-top: 10vh;
 }
@@ -677,23 +679,50 @@
     background-color: rgba(34, 229, 199, 0.5);
 }
 
-.social1 > h4 {
-    margin-top: 2vh;
+#socialText {
+    text-decoration: none;
     text-align: center;
+    margin-top: 2vh;
     font-size: 30px;
 }
 
-.social2 > h4 {
+#socialText > h4 {
     margin-top: 2vh;
-    text-align: center;
     font-size: 30px;
+    color: rgba(34, 229, 199, 0.9);
 }
 
 .social3 > h4 {
-    margin-top: 2vh;
     text-align: center;
+    margin-top: 2vh;
     font-size: 30px;
 }
+
+/* Section 2 */
+.mySpotify {
+    margin-top: 4vh;
+    text-align: center;
+    color: #fff;
+}
+
+.mySpotify > h4 {
+    margin-top: 2vh;
+}
+
+.myPlaylists {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 4vh;
+
+    color: #fff;
+    text-align: center;
+}
+
+.playlistText {
+    margin-top: 2vh;
+}
+
 
 
 /* Responsiveness */

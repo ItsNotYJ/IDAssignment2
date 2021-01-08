@@ -141,6 +141,18 @@ Finished the first section of the follow me page, all the social media pages are
 #### General Summary:
 * Finished social media section of follow me page
 
+## Commit 4.0
+The previous commit number was wrong, should've been 4.0 but its ok. For this commit, I finished the second section of the follow me page. With the API giving the playlist cover sources and playlist names, I was able to make use of javascript to incorporate the retrieved data.
+
+I adjusted a small bit for the first section where I also made the social media titles clickable / linked so that it is more intuitive as well rather than only being able to click on the image.
+
+I plan to improve on the colour contrast of the text on the page plus I want to find a way to improve the visual appeal of the images from the API.
+
+#### General Summary:
+* Finished User and Playlist section of the follow me page
+* Plan to refine the text colour contrast near the end
+* Minor adjustments to social media section
+
 ## Features:
 ### TBA:
 * Popup Alert/Notification users to choose for reduced motion on webpage

@@ -33,10 +33,21 @@ async function GetUsers(token, userID) {
 }
 
 // Get Spotify User's Playlist fetch
-async function GetUserPlaylist(token, userID) {
-    const limit = 3;
+async function GetUserPlaylist(token, playlistID) {
+    const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistID}`, {
+        method: 'GET',
+        headers: {
+            'Authorization' : 'Bearer ' + token
+        }
+    })
 
-    const response = await fetch(`https://api.spotify.com/v1/users/${userID}/playlists?limit=${limit}`, {
+    const json = await response.json();
+    return json;
+}
+
+// Get Playlist cover image fetch
+async function GetPlaylistCover(token, playlistID) {
+    const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistID}/images`, {
         method: 'GET',
         headers: {
             'Authorization' : 'Bearer ' + token
@@ -73,31 +84,85 @@ async function GetArtist(token, artistID) {
     return json;
 }
 
+// Insert user data into HTML function
+function InsertUserHTML(userData) {
+    $(".mySpotify img").attr("src", `${userData.images[0].url}`);
+    $(".mySpotify a").attr("href", `${userData.external_urls.spotify}`);
+    $(".spotifyMe").text(`${userData.display_name}`);
+}
+
+// Insert playlist cover data into HTML function
+function InsertPlaylistCover(playlist1, playlist2, playlist3) {
+    $(".playlist1 img").attr("src", `${playlist1[1].url}`);
+    $(".playlist2 img").attr("src", `${playlist2[1].url}`);
+    $(".playlist3 img").attr("src", `${playlist3[1].url}`);
+}
+
+// Insert playlist information into HTML function
+function InsertPlaylistHTML(kpopplaylistData, popplaylistData, rnbplaylistData) {
+    // Playlist 1
+    $(".playlist1 img").attr("src", `${kpopplaylistData.images[1].url}`);
+    $(".playlist1 a").attr("href", `${kpopplaylistData.external_urls.spotify}`);
+    $(".playlist1 h4").text(`${kpopplaylistData.name}`)
+
+    // // // Playlist 2
+    $(".playlist2 img").attr("src", `${popplaylistData.images[1].url}`);
+    $(".playlist2 a").attr("href", `${popplaylistData.external_urls.spotify}`);
+    $(".playlist2 h4").text(`${popplaylistData.name}`)
+
+    // // Playlist 3
+    $(".playlist3 img").attr("src", `${rnbplaylistData.images[1].url}`);
+    $(".playlist3 a").attr("href", `${rnbplaylistData.external_urls.spotify}`);
+    $(".playlist3 h4").text(`${rnbplaylistData.name}`)
+}
+
 // Acts as the main function where all the code goes
 async function RunAsync() {
     // My userID
     const myUserID = 'w2f8ozvkkxlr0swqer2f6uxor';
+
+    // My playlistID
+    const kpop = '6NEfCdpcUNNACjWeaMIQSn';
+    const pop = '5mrGnMae6rxfowb0cSAW28';
+    const rnb = '348eIPwqwnLM1eX5iSFpel';
+
     // Recommended Artists
     const deanID = '3eCd0TZrBPm2n9cDG6yWfF';
     const zicoID = '4XpUIb8uuNlIWVKmgKZXC0';
     const ericNamID = '2FLqlgckDKdmpBrvLAT5BM';
+
     // Recommended Album Tracks
     const albumID1 = '1wW2yfORAbOEfn2Et1q687'; // Dean's album
     const albumID2 = '0aDnkPxX660ezxCWBcqzVo'; // Zico's album
     const albumID3 = '7buYKdXbAntzuYkJj2oY2G'; // Eric Nam's album
+
     // To retrieve the value of the token from the promise and process its use
     const token = await GetToken(clientID, clientSecret, token_url).catch(error => console.error(error));
-    
+
+    // Retrieve user information
     const myUserData = await GetUsers(token, myUserID).catch(error => console.error(error));
-    console.log(myUserData);
-    
-    // const myUserPlaylists = await GetUserPlaylist(token, myUserID).catch(error => console.error(error));
+
+    // Insert user information into HTML
+    InsertUserHTML(myUserData);
+
+    // Retrieve user playlists information
+    const kpopPlaylist = await GetUserPlaylist(token, kpop).catch(error => console.error(error));
+    const popPlaylist = await GetUserPlaylist(token, pop).catch(error => console.error(error));
+    const rnbPlaylist = await GetUserPlaylist(token, rnb).catch(error => console.error(error));
+
+    // Insert user playlist information into HTML
+    InsertPlaylistHTML(kpopPlaylist, popPlaylist, rnbPlaylist);
+
+    // Retrieve artists information
     // const artistDean = await GetArtist(token, deanID).catch(error => console.error(error));
     // const artistZico = await GetArtist(token, zicoID).catch(error => console.error(error));
     // const artistEricNam = await GetArtist(token, ericNamID).catch(error => console.error(error));
+
+    // // Retrieve artists song information
     // const artistDeanTrack = await GetTrack(token, albumID1).catch(error => console.error(error));
     // const artistZicoTrack = await GetTrack(token, albumID2).catch(error => console.error(error));
     // const artistEricTrack = await GetTrack(token, albumID3).catch(error => console.error(error));
 }
 
 // Run the functions
+RunAsync()
