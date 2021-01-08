@@ -59,8 +59,8 @@ async function GetPlaylistCover(token, playlistID) {
 }
 
 // Get Spotify Album's Tracks fetch
-async function GetTrack(token, albumID) {
-    const response = await fetch(`https://api.spotify.com/v1/albums/${albumID}/tracks`, {
+async function GetTrack(token, trackID) {
+    const response = await fetch(`https://api.spotify.com/v1/tracks/${trackID}`, {
         method: 'GET',
         headers: {
             'Authorization' : 'Bearer ' + token
@@ -116,6 +116,43 @@ function InsertPlaylistHTML(kpopplaylistData, popplaylistData, rnbplaylistData) 
     $(".playlist3 h4").text(`${rnbplaylistData.name}`)
 }
 
+function InsertArtistHTML(deanData, zicoData, ericData) {
+    // Dean
+    $(".artist1 a").attr("href", `${deanData.external_urls.spotify}`);
+    $(".artist1 img").attr("src", `${deanData.images[1].url}`);
+    $(".artist1 h4").text(`${deanData.name}`);
+
+    // Zico
+    $(".artist2 a").attr("href", `${zicoData.external_urls.spotify}`);
+    $(".artist2 img").attr("src", `${zicoData.images[1].url}`);
+    $(".artist2 h4").text(`${zicoData.name}`);
+
+    // Eric
+    $(".artist3 a").attr("href", `${ericData.external_urls.spotify}`);
+    $(".artist3 img").attr("src", `${ericData.images[1].url}`);
+    $(".artist3 h4").text(`${ericData.name}`);
+}
+
+function InsertArtistSongHTML(deanData, zicoData, ericData) {
+    // Dean
+    $(".song1Info img").attr("src", `${deanData.album.images[1].url}`);
+    $(".song1Info a").attr("href", `${deanData.external_urls.spotify}`)
+    $(".song1Text p").text(`${deanData.artists[0].name}`)
+    $(".song1Text h4").text(`${deanData.name}`)
+
+    // Zico
+    $(".song2Info img").attr("src", `${zicoData.album.images[1].url}`);
+    $(".song2Info a").attr("href", `${zicoData.external_urls.spotify}`)
+    $(".song2 p").text(`${zicoData.artists[0].name}`)
+    $(".song2 h4").text(`${zicoData.name}`)
+    
+    // Eric
+    $(".song3Info img").attr("src", `${ericData.album.images[1].url}`);
+    $(".song3Info a").attr("href", `${ericData.external_urls.spotify}`)
+    $(".song3 p").text(`${ericData.artists[0].name}`)
+    $(".song3 h4").text(`${ericData.name}`)
+}
+
 // Acts as the main function where all the code goes
 async function RunAsync() {
     // My userID
@@ -132,9 +169,9 @@ async function RunAsync() {
     const ericNamID = '2FLqlgckDKdmpBrvLAT5BM';
 
     // Recommended Album Tracks
-    const albumID1 = '1wW2yfORAbOEfn2Et1q687'; // Dean's album
-    const albumID2 = '0aDnkPxX660ezxCWBcqzVo'; // Zico's album
-    const albumID3 = '7buYKdXbAntzuYkJj2oY2G'; // Eric Nam's album
+    const trackID1 = '6z1kLsntE7FuzKZHZWrXYN'; // Dean's album
+    const trackID2 = '1pz24zu5H9A0S1a2NKT4F0'; // Zico's album
+    const trackID3 = '7Mfb2IwRNP8Qi7Ojtpmi37'; // Eric Nam's album
 
     // To retrieve the value of the token from the promise and process its use
     const token = await GetToken(clientID, clientSecret, token_url).catch(error => console.error(error));
@@ -154,14 +191,20 @@ async function RunAsync() {
     InsertPlaylistHTML(kpopPlaylist, popPlaylist, rnbPlaylist);
 
     // Retrieve artists information
-    // const artistDean = await GetArtist(token, deanID).catch(error => console.error(error));
-    // const artistZico = await GetArtist(token, zicoID).catch(error => console.error(error));
-    // const artistEricNam = await GetArtist(token, ericNamID).catch(error => console.error(error));
+    const artistDean = await GetArtist(token, deanID).catch(error => console.error(error));
+    const artistZico = await GetArtist(token, zicoID).catch(error => console.error(error));
+    const artistEricNam = await GetArtist(token, ericNamID).catch(error => console.error(error));
+
+    // Insert artist  information into HTML
+    InsertArtistHTML(artistDean, artistZico, artistEricNam);
 
     // // Retrieve artists song information
-    // const artistDeanTrack = await GetTrack(token, albumID1).catch(error => console.error(error));
-    // const artistZicoTrack = await GetTrack(token, albumID2).catch(error => console.error(error));
-    // const artistEricTrack = await GetTrack(token, albumID3).catch(error => console.error(error));
+    const artistDeanTrack = await GetTrack(token, trackID1).catch(error => console.error(error));
+    const artistZicoTrack = await GetTrack(token, trackID2).catch(error => console.error(error));
+    const artistEricTrack = await GetTrack(token, trackID3).catch(error => console.error(error));
+
+    // Insert Artist Song information into HTML
+    InsertArtistSongHTML(artistDeanTrack, artistZicoTrack, artistEricTrack);
 }
 
 // Run the functions

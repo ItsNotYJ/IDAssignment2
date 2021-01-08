@@ -153,6 +153,20 @@ I plan to improve on the colour contrast of the text on the page plus I want to 
 * Plan to refine the text colour contrast near the end
 * Minor adjustments to social media section
 
+## Commit 4.1
+I have completed the last section of the follow me page which is the artist section and also the my recommended songs of those artists section. The follow me page HTML mainly is at least 80% javascripted from the spotify API with exceptions such as the playlist embedding and the social media links at the top.
+
+Now all that is left for the page is mainly the responsiveness which I will complete by the next commit. From now onwards, all pages are deemed to be completed and now I will begin to refine and implent additional changes to the website accordingly to improve its appeal, visuals and interactivity.
+
+Lastly, I will look through my assignment guidelines once more to check if anything is missing from the current state of the website and add them in accordingly.
+
+#### General Summary
+* Finished last section of follow me page
+* Finished Follow me page
+* Follow me page responsiveness to be completed by next commit
+* Left with refining and fine-tuning of website
+* Need to cross-check guidelines for any missing features or references
+
 ## Features:
 ### TBA:
 * Popup Alert/Notification users to choose for reduced motion on webpage
@@ -169,6 +183,7 @@ I plan to improve on the colour contrast of the text on the page plus I want to 
 * Cool External JS Library Text Animations
 * Bootstrap Usage
 * Attractive Background Display for each page
+* Embedded Spotify Playlists
 
 ## Technologies Used:
 * [HTML](https://www.w3schools.com/html/)

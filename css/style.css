@@ -656,7 +656,7 @@
     flex-direction: column;
     align-items: center;
 
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(0,0,0, 0.5);
 }
 
 .socialMedia {
@@ -723,7 +723,85 @@
     margin-top: 2vh;
 }
 
+.playlist1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;   
+}
 
+.playlist2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;   
+}
+
+.playlist3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Section 3 */
+.artists {
+    width: 100%;
+}
+
+.artistCover {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    margin-top: 4vh;
+}
+
+.artistText {
+    margin-top: 2vh;
+}
+
+.artist1 {
+    width: 30%;
+}
+
+.artist2 {
+    width: 30%;
+}
+
+.artist3 {
+    width: 30%;
+}
+
+/* Section 3, song section */
+.artistSong {
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.song1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 24%;
+}
+
+.song2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+
+.song3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 29%;
+}
 
 /* Responsiveness */
 
