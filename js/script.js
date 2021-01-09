@@ -209,3 +209,22 @@ async function RunAsync() {
 
 // Run the functions
 RunAsync()
+
+// Media Query
+function Ipad768px(x) {
+    if (x.matches) {
+        // Section 1
+        $(".social1 img").attr("src", "followIMG/instagramSmall.png")
+        $(".social2 img").attr("src", "followIMG/linkedinSmall.png")
+        $(".social3 img").attr("src", "followIMG/telegramSmall.png")
+    }
+    else {
+        $(".social1 img").attr("src", "followIMG/instagram.png")
+        $(".social2 img").attr("src", "followIMG/linkedin.png")
+        $(".social3 img").attr("src", "followIMG/telegram.png")
+    }
+}
+
+const ipad = window.matchMedia("(max-width: 768px)")
+Ipad768px(ipad);
+ipad.addListener(Ipad768px);

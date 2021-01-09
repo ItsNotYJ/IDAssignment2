@@ -167,12 +167,20 @@ Lastly, I will look through my assignment guidelines once more to check if anyth
 * Left with refining and fine-tuning of website
 * Need to cross-check guidelines for any missing features or references
 
+## Commit 4.2
+I have now completed the responsiveness for the follow me page. I made use of javascript media queries to change the DOM attributes of the social media image sources as I can't do that in CSS. I learnt this from W3Schools which was very helpful. With this, when the user is using a screen size of 768px or so (Ipad), the image size will shrink if the viewport size matches in the javascript media query.
+
+Now all that is left to do is final adjustments and touchups. There really isn't much time left to be able to introduce a second API sadly.
+
+#### General Summary
+* Finished responsiveness of follow me page
+* Left with refining and fine-tuning of website
+* Need to cross-check guidelines for any missing features or references
+
 ## Features:
 ### TBA:
 * Popup Alert/Notification users to choose for reduced motion on webpage
 * Page Animations
-* Text Animations for certain pages
-* Some sort of contact form (Not confirmed)
 
 ### Existing:
 * Home Page
@@ -184,6 +192,7 @@ Lastly, I will look through my assignment guidelines once more to check if anyth
 * Bootstrap Usage
 * Attractive Background Display for each page
 * Embedded Spotify Playlists
+* Text Animations for certain pages
 
 ## Technologies Used:
 * [HTML](https://www.w3schools.com/html/)
