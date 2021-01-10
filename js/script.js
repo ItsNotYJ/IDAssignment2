@@ -1,3 +1,4 @@
+// Spotify API
 const clientID = '5b40f982691941e0b89906cee56d4a97';
 const clientSecret = '6e8251a146634c6488985f4763e135cb';
 const token_url = 'https://accounts.spotify.com/api/token';
@@ -153,6 +154,90 @@ function InsertArtistSongHTML(deanData, zicoData, ericData) {
     $(".song3 h4").text(`${ericData.name}`)
 }
 
+// Manga API
+// Get Anime fetch function
+async function GetAnime(animeName) {
+    const response = await fetch(`https://kitsu.io/api/edge/anime?filter[text]="${animeName}"`, {
+        method: 'GET',
+        headers: {
+            'Accept' : 'application/vnd.api+json',
+            'Content-Type' : 'application/vnd.api+json'
+        }
+    })
+
+    const json = await response.json();
+    return json;
+}
+
+// Get Manga fetch function
+async function GetManga(mangaName) {
+    const response = await fetch(`https://kitsu.io/api/edge/manga?filter[text]="${mangaName}"`, {
+        method: 'GET',
+        headers: {
+            'Accept' : 'application/vnd.api+json',
+            'Content-Type' : 'application/vnd.api+json'
+        }
+    })
+
+    const json = await response.json();
+    return json;
+}
+
+// Insert Anime data into HTML
+function Loading() {
+    $('.loading').hide();
+}
+
+function InsertAnimeHTML(haikyuuData, hxhData, dnaData, yoiData, apotheosisData, togData, slData, knkData) {
+    // Haikyuu
+    $(".anime1 a").attr("href", `https://kitsu.io/anime/${haikyuuData.data[0].id}`);
+    $(".anime1 img").attr("src", `${haikyuuData.data[0].attributes.posterImage.medium}`);
+    $(".anime1 h4").text(`${haikyuuData.data[0].attributes.titles.en}`)
+    $(".anime1 h3").text(`${haikyuuData.data[0].attributes.titles.ja_jp}`)
+
+    // HxH
+    $(".anime2 a").attr("href", `https://kitsu.io/anime/${hxhData.data[0].id}`);
+    $(".anime2 img").attr("src", `${hxhData.data[0].attributes.posterImage.medium}`);
+    $(".anime2 h4").text(`${hxhData.data[0].attributes.titles.en}`)
+    $(".anime2 h3").text(`${hxhData.data[0].attributes.titles.ja_jp}`)
+
+    // Diamond No Ace
+    $(".anime3 a").attr("href", `https://kitsu.io/anime/${dnaData.data[0].id}`);
+    $(".anime3 img").attr("src", `${dnaData.data[0].attributes.posterImage.medium}`);
+    $(".anime3 h4").text(`${dnaData.data[0].attributes.titles.en}`)
+    $(".anime3 h3").text(`${dnaData.data[0].attributes.titles.ja_jp}`)
+
+    // Yuri On Ice
+    $(".anime4 a").attr("href", `https://kitsu.io/anime/${yoiData.data[0].id}`);
+    $(".anime4 img").attr("src", `${yoiData.data[0].attributes.posterImage.medium}`);
+    $(".anime4 h4").text(`${yoiData.data[0].attributes.titles.en}`)
+    $(".anime4 h3").text(`${yoiData.data[0].attributes.titles.ja_jp}`)
+
+    // Apotheosis
+    $(".manga1 a").attr("href", `https://kitsu.io/manga/${apotheosisData.data[0].id}`);
+    $(".manga1 img").attr("src", `${apotheosisData.data[0].attributes.posterImage.medium}`);
+    $(".manga1 h4").text(`${apotheosisData.data[0].attributes.titles.en}`)
+    $(".manga1 h3").text(`${apotheosisData.data[0].attributes.titles.zh_cn}`)
+    
+    // Tower of God
+    $(".manga2 a").attr("href", `https://kitsu.io/manga/${togData.data[0].id}`);
+    $(".manga2 img").attr("src", `${togData.data[0].attributes.posterImage.medium}`);
+    $(".manga2 h4").text(`${togData.data[0].attributes.titles.en}`)
+    $(".manga2 h3").text(`${togData.data[0].attributes.titles.ko_kr}`)
+
+    // Solo Leveling
+    $(".manga3 a").attr("href", `https://kitsu.io/manga/${slData.data[0].id}`);
+    $(".manga3 img").attr("src", `${slData.data[0].attributes.posterImage.medium}`);
+    $(".manga3 h4").text(`${slData.data[0].attributes.titles.en}`)
+    $(".manga3 h3").text(`${slData.data[0].attributes.titles.ko_kr}`)
+
+    // Koe no Kitachi
+    $(".manga4 a").attr("href", `https://kitsu.io/manga/${knkData.data[0].id}`);
+    $(".manga4 img").attr("src", `${knkData.data[0].attributes.posterImage.medium}`);
+    $(".manga4 h4").text(`${knkData.data[0].attributes.titles.en}`)
+    $(".manga4 h3").text(`${knkData.data[0].attributes.titles.ja_jp}`)
+}
+
 // Acts as the main function where all the code goes
 async function RunAsync() {
     // My userID
@@ -205,18 +290,56 @@ async function RunAsync() {
 
     // Insert Artist Song information into HTML
     InsertArtistSongHTML(artistDeanTrack, artistZicoTrack, artistEricTrack);
+
+    // Anime API
+    // Get Anime Response
+    const haikyuu = await GetAnime("haikyuu").catch(error => console.log(error));
+    const hxh = await GetAnime("hunter x hunter").catch(error => console.log(error));
+    const dna = await GetAnime("diamond no ace").catch(error => console.log(error));
+    const yoi = await GetAnime("yuri on ice").catch(error => console.log(error));
+
+    // // Get Manga response
+    const apotheosis = await GetManga("apotheosis").catch(error => console.log(error));
+    const tog = await GetManga("tower of god").catch(error => console.log(error));
+    const sl = await GetManga("solo leveling").catch(error => console.log(error));
+    const knk = await GetManga("koe no katachi").catch(error => console.log(error));
+
+    // Insert Anime and Manga into HTML
+    InsertAnimeHTML(haikyuu, hxh, dna, yoi, apotheosis, tog, sl, knk);
+    Loading();
+
+    // Responsiveness
+    const ipad = window.matchMedia("(max-width: 768px)")
+    Ipad768px(ipad, haikyuu, hxh, dna, yoi, apotheosis, tog, sl, knk);
+    ipad.addListener(Ipad768px);
 }
 
 // Run the functions
 RunAsync()
 
 // Media Query
-function Ipad768px(x) {
+function Ipad768px(x, haikyuu, hxh, dna, yoi, apotheosis, tog, sl, knk) {
     if (x.matches) {
         // Section 1
         $(".social1 img").attr("src", "followIMG/instagramSmall.png")
         $(".social2 img").attr("src", "followIMG/linkedinSmall.png")
         $(".social3 img").attr("src", "followIMG/telegramSmall.png")
+
+        function InsertAnimeHTML(haikyuuData, hxhData, dnaData, yoiData, apotheosisData, togData, slData, knkData) {
+            // Anime
+            $(".anime1 img").attr("src", `${haikyuuData.data[0].attributes.posterImage.small}`);
+            $(".anime2 img").attr("src", `${hxhData.data[0].attributes.posterImage.small}`);
+            $(".anime3 img").attr("src", `${dnaData.data[0].attributes.posterImage.small}`);
+            $(".anime4 img").attr("src", `${yoiData.data[0].attributes.posterImage.small}`);
+            
+            // Manga
+            $(".manga1 img").attr("src", `${apotheosisData.data[0].attributes.posterImage.small}`);
+            $(".manga2 img").attr("src", `${togData.data[0].attributes.posterImage.small}`);
+            $(".manga3 img").attr("src", `${slData.data[0].attributes.posterImage.small}`);
+            $(".manga4 img").attr("src", `${knkData.data[0].attributes.posterImage.small}`);
+        }
+        
+        InsertAnimeHTML(haikyuu, hxh, dna, yoi, apotheosis, tog, sl, knk);
     }
     else {
         $(".social1 img").attr("src", "followIMG/instagram.png")
@@ -224,7 +347,3 @@ function Ipad768px(x) {
         $(".social3 img").attr("src", "followIMG/telegram.png")
     }
 }
-
-const ipad = window.matchMedia("(max-width: 768px)")
-Ipad768px(ipad);
-ipad.addListener(Ipad768px);

@@ -415,32 +415,20 @@
     color: rgba(212, 175, 55);
 }
 
-.python {
+.python, .csharp, .html, .css, .javascript, .jquery {
     display: flex;
     justify-content: space-between;
 }
 
-.python p {
+.python p, .csharp p, .html p, .css p, .javascript p, .jquery p {
     font-size: 17px;
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
-
 
 .python > .progress > .progress-bar {
     width: 60%;
     background-color: rgb(107, 68, 242);
-}
-
-.csharp {
-    display: flex;
-    justify-content: space-between;
-}
-
-.csharp p {
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
 }
 
 .csharp > .progress > .progress-bar {
@@ -448,48 +436,14 @@
     background-color: rgb(107, 68, 242);
 }
 
-.html {
-    display: flex;
-    justify-content: space-between;
-}
-
-.html p {
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-}
-
 .html > .progress > .progress-bar {
     width: 60%;
     background-color: rgb(107, 68, 242);
 }
 
-.css {
-    display: flex;
-    justify-content: space-between;
-}
-
-.css p {
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-}
-
-
 .css > .progress > .progress-bar {
     width: 55%;
     background-color: rgb(107, 68, 242);
-}
-
-.javascript {
-    display: flex;
-    justify-content: space-between;
-}
-
-.javascript p {
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
 }
 
 .javascript > .progress > .progress-bar {
@@ -497,21 +451,9 @@
     background-color: rgb(107, 68, 242);
 }
 
-.jquery {
-    display: flex;
-    justify-content: space-between;
-}
-
-
 .jquery > .progress > .progress-bar {
     width: 30%;
     background-color: rgb(107, 68, 242);
-}
-
-.jquery p {
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
 }
 
 /* Application Skills */
@@ -535,12 +477,12 @@
     color: rgba(212, 175, 55);
 }
 
-.powerpoint {
+.powerpoint, .msword, .excel, .photoshop, .illustrator {
     display: flex;
     justify-content: space-between;
 }
 
-.powerpoint p {
+.powerpoint p, .msword p, .excel p, .photoshop p, .illustrator p, .xd p {
     font-size: 17px;
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -551,31 +493,9 @@
     background-color: rgb(107, 68, 242);
 }
 
-.msword {
-    display: flex;
-    justify-content: space-between;
-}
-
-.msword p {
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-}
-
 .msword > .progress > .progress-bar {
     width: 75%;
     background-color: rgb(107, 68, 242);
-}
-
-.excel {
-    display: flex;
-    justify-content: space-between;
-}
-
-.excel p {
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
 }
 
 .excel > .progress > .progress-bar {
@@ -583,31 +503,9 @@
     background-color: rgb(107, 68, 242);
 }
 
-.photoshop {
-    display: flex;
-    justify-content: space-between;
-}
-
-.photoshop p {
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-}
-
 .photoshop > .progress > .progress-bar {
     width: 50%;
     background-color: rgb(107, 68, 242);
-}
-
-.illustrator {
-    display: flex;
-    justify-content: space-between;
-}
-
-.illustrator p {
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
 }
 
 .illustrator > .progress > .progress-bar {
@@ -619,12 +517,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.xd p {
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
 }
 
 .xd > .progress > .progress-bar {
@@ -723,19 +615,7 @@
     margin-top: 2vh;
 }
 
-.playlist1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;   
-}
-
-.playlist2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;   
-}
-
-.playlist3 {
+.playlist1, .playlist2, .playlist3 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -801,6 +681,67 @@
     justify-content: space-evenly;
     align-items: center;
     width: 29%;
+}
+
+/* Anime page CSS */
+.animeBody {
+    background-image: url('../animeIMG/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.animeContainer {
+    background-color: rgba(0,0,0, 0.7);
+}
+
+#animeHeader {
+    padding-top: 10vh;
+    margin-top: 0;
+}
+
+.animeList {
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Section 2 */
+.mangaList {
+    padding-bottom: 4vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+
+#animeItems {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.manga1, .manga2, .manga3, .manga4 {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 14vh;
+    color: rgba(212, 175, 55, 0.7);
 }
 
 /* Responsiveness */
@@ -975,6 +916,20 @@
 
     #songText {
         width: 25%;
+    }
+
+    /* Anime responsiveness */
+    .animeList {
+        margin-top: 2vh;
+    }
+
+    .mangaList {
+        margin-top: 2vh;
+    }
+
+    .manga1 h4{
+        text-align: center;
+        width: 80%;
     }
 }
 
@@ -1174,6 +1129,46 @@
 
     #songText {
         width: 40%;
+    }
+
+    /* Anime responsiveness */
+    .animeList {
+        margin-top: 2vh;
+        text-align: center;
+    }
+
+    .mangaList {
+        margin-top: 2vh;
+        text-align: center;
+    }
+
+    .animeList h4 {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .animeList h3 {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    /* Section 2 */
+    .manga1, .manga2, .manga3, .manga4 {
+        width: 50%;
+    }
+
+    .manga1 h4, .manga2 h4, .manga3 h4, .manga4 h4 {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .manga1 h3, .manga2 h3, .manga3 h3, .manga4 h3 {
+        width: 100%;
+        font-size: 25px;
+    }
+    
+    .loading > p{
+        font-size: 20px;
     }
 }
 
@@ -1459,5 +1454,56 @@
         width: 100%;
         flex-direction: column;
         margin-top: 5vh;
+    }
+
+    /* Anime responsiveness */
+    #animeHeader {
+        padding-top: 15vh;
+    }
+
+    .animeList {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #animeItems {
+        width: 100%;
+        margin-top: 4vh;
+    }
+
+    .animeList h4 {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .animeList h3 {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    /* Section 2 */
+    .mangaList {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .manga1, .manga2, .manga3, .manga4 {
+        width: 100%;
+    }
+
+    .manga1 h4, .manga2 h4, .manga3 h4, .manga4 h4 {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .manga1 h3, .manga2 h3, .manga3 h3, .manga4 h3 {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .loading > p{
+        font-size: 20px;
     }
 }

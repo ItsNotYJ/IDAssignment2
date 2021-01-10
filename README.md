@@ -4,6 +4,8 @@ So what is this website all about? Well this website is a personal website that 
 
 This project will focus mainly on the use of the Spotify API to GET user playlists or user information. It will dive into use of Spotify's Client Credential Flow in order to gain access to the API with its unique token. With the spotify API, I will use it under my hobbies or a page where I'll display my own playlists and talk about my likings and stuff. That one page will contain most of the Spotify API usage whereas the other pages will mainly use javascript and css for styling. There may be a chance to include a few other APIs other than spotify as well for further interactivity.
 
+Additionally, I have decided to use the API called kitsu API which allows me to share the many different kinds of manga and anime that I enjoy with readers of the website. I did plan to implement the search function where users can also look for a manga of their liking, but that wouldn't fit the purpose of the website hence I did not include it.
+
 ## Commit 1.0
 So for this first commit, I basically set up all the required files such as the css, js and html files required. Next, I started on playing around with the Spotify OAuth 2.0 Authorization in order to use the API. I had to watch a few videos here and there to understand the syntax behind the fetch method eg. (using btoa() to encode a string to base 64 as specified on the spotify *Client Credential Flows* header parameters)
 
@@ -177,10 +179,23 @@ Now all that is left to do is final adjustments and touchups. There really isn't
 * Left with refining and fine-tuning of website
 * Need to cross-check guidelines for any missing features or references
 
+## Commit 5.0
+Since, I had some extra time. I implemented the kitsu API into my website by adding an additional page called My Anime List. This page aims to share my interest to the readers of my website. In a way, this helps to further display my tastes and interests in my hobbies.
+
+I made use of the javascript media query once again to deal with the resizing of the images on smaller devices. I tried to implement or include the synopsis of each anime/manga but I found that the page would become to wordy hence I scrapped that idea and instead kept it minimal.
+
+I added a loading/spinner preview as the API takes a few seconds to load, once loaded the spinner will be hidden with the Loading function in the javascript which hides the div of the spinner. I also shortened a few codes in the CSS file as I realised there were quite a few repeated lines of code, making the file neater in the process. The README.md is also updated accordingly to this commit, I will complete the testing by the next commit.
+
+All in all, the anime list page is completed with the responsiveness fully done. I have decided not to include page transitions/animations due to the interest of time however, I do feel that the pages on its own are sufficient in terms of visual appeal.
+
+#### General Summary:
+* Finished Anime List page
+* Finished Anime List Responsiveness
+* Not going to include page transitions/animations
+
 ## Features:
 ### TBA:
 * Popup Alert/Notification users to choose for reduced motion on webpage
-* Page Animations
 
 ### Existing:
 * Home Page
@@ -247,6 +262,10 @@ I had an issue trying to retrieve the data from the async function as it kept re
 * [MBS Award Description](https://www.3blmedia.com/News/Marina-Bay-Sands-Distributes-Youth-Education-Award-Team-Members-Children)
 * [MOE Award Description](https://beta.moe.gov.sg/fees-assistance-awards-scholarships/awards-scholarships/edusave-awards/)
 * [SSSC Award Description](https://www.moe.gov.sg/docs/default-source/document/media/press/2018/singapore-schools-sports-council-colours-awards-2018-annex-a.pdf)
+* [Follow Me Page Background](https://www.walpaperlist.com/2020/01/wallpaper-gif-1920x1080.html)
+* [Anime Page Background](https://www.artstation.com/artwork/1nP49L)
+* [Kitsu API](https://kitsu.docs.apiary.io/#introduction/authentication/access-token-responses)
+* [Kitsu IO Website](https://kitsu.io/explore/anime)
 
 ### Media:
 * [How to use fetch](https://www.youtube.com/watch?v=tc8DU14qX6I&ab_channel=TheCodingTrain)
