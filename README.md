@@ -257,7 +257,7 @@ During the HTML Validation, I had to CSS the iframe for the spotify embedding of
 Other than that, there were no issues faced during responsiveness and the other sections below while coding or testing.
 
 ### For commit 5.0:
-For these few commits, I didn't have much of an issue as I was familiar with the usage of APIs already. However, I did come to find that the Kitsu API would take much longer than the Spotify API to load, hence, I decided to use Bootstrap's loading spinner in place to tell viewers that the API is still loading. Once loaded, I would use javascript to hide the division that holds the loading spinner.
+For these few commits, I didn't have much of an issue as I was familiar with the usage of APIs already. However, I did come to find that the Kitsu API would take much longer than the Spotify API to load, hence, I decided to use Bootstrap's loading spinner in place to tell viewers that the API is still loading. Once loaded, I would use javascript to hide the division that holds the loading spinner. Also, every once in a while the kitsu api server fails and will not load or send the data required, this requires a few refreshes or waiting a certain period of time before running the page again.
 
 The responsiveness was a smooth trip and I did not have any issues with coding it or testing it.
 
