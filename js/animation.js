@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */ 
 // Home page text animation
 function HomeAnimation() {
     const anText = baffle('.homeImgTitle');

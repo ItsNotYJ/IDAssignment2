@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 // Spotify API
 const clientID = '5b40f982691941e0b89906cee56d4a97';
 const clientSecret = '6e8251a146634c6488985f4763e135cb';
@@ -14,7 +15,7 @@ async function GetToken(clientID, clientSecret, token_url) {
             'Authorization' : 'Basic ' + btoa(clientID + ':' + clientSecret)
         },
         body: 'grant_type=client_credentials'
-    })
+    });
 
     const json = await response.json();
     return json.access_token;
@@ -27,7 +28,7 @@ async function GetUsers(token, userID) {
         headers: {
             'Authorization' : 'Bearer ' + token
         }
-    })
+    });
 
     const json = await response.json();
     return json;
@@ -40,20 +41,7 @@ async function GetUserPlaylist(token, playlistID) {
         headers: {
             'Authorization' : 'Bearer ' + token
         }
-    })
-
-    const json = await response.json();
-    return json;
-}
-
-// Get Playlist cover image fetch
-async function GetPlaylistCover(token, playlistID) {
-    const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistID}/images`, {
-        method: 'GET',
-        headers: {
-            'Authorization' : 'Bearer ' + token
-        }
-    })
+    });
 
     const json = await response.json();
     return json;
@@ -66,7 +54,7 @@ async function GetTrack(token, trackID) {
         headers: {
             'Authorization' : 'Bearer ' + token
         }
-    })
+    });
 
     const json = await response.json();
     return json;
@@ -79,7 +67,7 @@ async function GetArtist(token, artistID) {
         headers: {
             'Authorization' : 'Bearer ' + token
         }
-    })
+    });
 
     const json = await response.json();
     return json;
@@ -92,29 +80,22 @@ function InsertUserHTML(userData) {
     $(".spotifyMe").text(`${userData.display_name}`);
 }
 
-// Insert playlist cover data into HTML function
-function InsertPlaylistCover(playlist1, playlist2, playlist3) {
-    $(".playlist1 img").attr("src", `${playlist1[1].url}`);
-    $(".playlist2 img").attr("src", `${playlist2[1].url}`);
-    $(".playlist3 img").attr("src", `${playlist3[1].url}`);
-}
-
 // Insert playlist information into HTML function
 function InsertPlaylistHTML(kpopplaylistData, popplaylistData, rnbplaylistData) {
     // Playlist 1
     $(".playlist1 img").attr("src", `${kpopplaylistData.images[1].url}`);
     $(".playlist1 a").attr("href", `${kpopplaylistData.external_urls.spotify}`);
-    $(".playlist1 h4").text(`${kpopplaylistData.name}`)
+    $(".playlist1 h4").text(`${kpopplaylistData.name}`);
 
     // // // Playlist 2
     $(".playlist2 img").attr("src", `${popplaylistData.images[1].url}`);
     $(".playlist2 a").attr("href", `${popplaylistData.external_urls.spotify}`);
-    $(".playlist2 h4").text(`${popplaylistData.name}`)
+    $(".playlist2 h4").text(`${popplaylistData.name}`);
 
     // // Playlist 3
     $(".playlist3 img").attr("src", `${rnbplaylistData.images[1].url}`);
     $(".playlist3 a").attr("href", `${rnbplaylistData.external_urls.spotify}`);
-    $(".playlist3 h4").text(`${rnbplaylistData.name}`)
+    $(".playlist3 h4").text(`${rnbplaylistData.name}`);
 }
 
 function InsertArtistHTML(deanData, zicoData, ericData) {
@@ -137,21 +118,21 @@ function InsertArtistHTML(deanData, zicoData, ericData) {
 function InsertArtistSongHTML(deanData, zicoData, ericData) {
     // Dean
     $(".song1Info img").attr("src", `${deanData.album.images[1].url}`);
-    $(".song1Info a").attr("href", `${deanData.external_urls.spotify}`)
-    $(".song1Text p").text(`${deanData.artists[0].name}`)
-    $(".song1Text h4").text(`${deanData.name}`)
+    $(".song1Info a").attr("href", `${deanData.external_urls.spotify}`);
+    $(".song1Text p").text(`${deanData.artists[0].name}`);
+    $(".song1Text h4").text(`${deanData.name}`);
 
     // Zico
     $(".song2Info img").attr("src", `${zicoData.album.images[1].url}`);
-    $(".song2Info a").attr("href", `${zicoData.external_urls.spotify}`)
-    $(".song2 p").text(`${zicoData.artists[0].name}`)
-    $(".song2 h4").text(`${zicoData.name}`)
+    $(".song2Info a").attr("href", `${zicoData.external_urls.spotify}`);
+    $(".song2 p").text(`${zicoData.artists[0].name}`);
+    $(".song2 h4").text(`${zicoData.name}`);
     
     // Eric
     $(".song3Info img").attr("src", `${ericData.album.images[1].url}`);
-    $(".song3Info a").attr("href", `${ericData.external_urls.spotify}`)
-    $(".song3 p").text(`${ericData.artists[0].name}`)
-    $(".song3 h4").text(`${ericData.name}`)
+    $(".song3Info a").attr("href", `${ericData.external_urls.spotify}`);
+    $(".song3 p").text(`${ericData.artists[0].name}`);
+    $(".song3 h4").text(`${ericData.name}`);
 }
 
 // Manga API
@@ -163,7 +144,7 @@ async function GetAnime(animeName) {
             'Accept' : 'application/vnd.api+json',
             'Content-Type' : 'application/vnd.api+json'
         }
-    })
+    });
 
     const json = await response.json();
     return json;
@@ -177,7 +158,7 @@ async function GetManga(mangaName) {
             'Accept' : 'application/vnd.api+json',
             'Content-Type' : 'application/vnd.api+json'
         }
-    })
+    });
 
     const json = await response.json();
     return json;
@@ -192,50 +173,50 @@ function InsertAnimeHTML(haikyuuData, hxhData, dnaData, yoiData, apotheosisData,
     // Haikyuu
     $(".anime1 a").attr("href", `https://kitsu.io/anime/${haikyuuData.data[0].id}`);
     $(".anime1 img").attr("src", `${haikyuuData.data[0].attributes.posterImage.medium}`);
-    $(".anime1 h4").text(`${haikyuuData.data[0].attributes.titles.en}`)
-    $(".anime1 h3").text(`${haikyuuData.data[0].attributes.titles.ja_jp}`)
+    $(".anime1 h4").text(`${haikyuuData.data[0].attributes.titles.en}`);
+    $(".anime1 h3").text(`${haikyuuData.data[0].attributes.titles.ja_jp}`);
 
     // HxH
     $(".anime2 a").attr("href", `https://kitsu.io/anime/${hxhData.data[0].id}`);
     $(".anime2 img").attr("src", `${hxhData.data[0].attributes.posterImage.medium}`);
-    $(".anime2 h4").text(`${hxhData.data[0].attributes.titles.en}`)
-    $(".anime2 h3").text(`${hxhData.data[0].attributes.titles.ja_jp}`)
+    $(".anime2 h4").text(`${hxhData.data[0].attributes.titles.en}`);
+    $(".anime2 h3").text(`${hxhData.data[0].attributes.titles.ja_jp}`);
 
     // Diamond No Ace
     $(".anime3 a").attr("href", `https://kitsu.io/anime/${dnaData.data[0].id}`);
     $(".anime3 img").attr("src", `${dnaData.data[0].attributes.posterImage.medium}`);
-    $(".anime3 h4").text(`${dnaData.data[0].attributes.titles.en}`)
-    $(".anime3 h3").text(`${dnaData.data[0].attributes.titles.ja_jp}`)
+    $(".anime3 h4").text(`${dnaData.data[0].attributes.titles.en}`);
+    $(".anime3 h3").text(`${dnaData.data[0].attributes.titles.ja_jp}`);
 
     // Yuri On Ice
     $(".anime4 a").attr("href", `https://kitsu.io/anime/${yoiData.data[0].id}`);
     $(".anime4 img").attr("src", `${yoiData.data[0].attributes.posterImage.medium}`);
-    $(".anime4 h4").text(`${yoiData.data[0].attributes.titles.en}`)
-    $(".anime4 h3").text(`${yoiData.data[0].attributes.titles.ja_jp}`)
+    $(".anime4 h4").text(`${yoiData.data[0].attributes.titles.en}`);
+    $(".anime4 h3").text(`${yoiData.data[0].attributes.titles.ja_jp}`);
 
     // Apotheosis
     $(".manga1 a").attr("href", `https://kitsu.io/manga/${apotheosisData.data[0].id}`);
     $(".manga1 img").attr("src", `${apotheosisData.data[0].attributes.posterImage.medium}`);
-    $(".manga1 h4").text(`${apotheosisData.data[0].attributes.titles.en}`)
-    $(".manga1 h3").text(`${apotheosisData.data[0].attributes.titles.zh_cn}`)
+    $(".manga1 h4").text(`${apotheosisData.data[0].attributes.titles.en}`);
+    $(".manga1 h3").text(`${apotheosisData.data[0].attributes.titles.zh_cn}`);
     
     // Tower of God
     $(".manga2 a").attr("href", `https://kitsu.io/manga/${togData.data[0].id}`);
     $(".manga2 img").attr("src", `${togData.data[0].attributes.posterImage.medium}`);
-    $(".manga2 h4").text(`${togData.data[0].attributes.titles.en}`)
-    $(".manga2 h3").text(`${togData.data[0].attributes.titles.ko_kr}`)
+    $(".manga2 h4").text(`${togData.data[0].attributes.titles.en}`);
+    $(".manga2 h3").text(`${togData.data[0].attributes.titles.ko_kr}`);
 
     // Solo Leveling
     $(".manga3 a").attr("href", `https://kitsu.io/manga/${slData.data[0].id}`);
     $(".manga3 img").attr("src", `${slData.data[0].attributes.posterImage.medium}`);
-    $(".manga3 h4").text(`${slData.data[0].attributes.titles.en}`)
-    $(".manga3 h3").text(`${slData.data[0].attributes.titles.ko_kr}`)
+    $(".manga3 h4").text(`${slData.data[0].attributes.titles.en}`);
+    $(".manga3 h3").text(`${slData.data[0].attributes.titles.ko_kr}`);
 
     // Koe no Kitachi
     $(".manga4 a").attr("href", `https://kitsu.io/manga/${knkData.data[0].id}`);
     $(".manga4 img").attr("src", `${knkData.data[0].attributes.posterImage.medium}`);
-    $(".manga4 h4").text(`${knkData.data[0].attributes.titles.en}`)
-    $(".manga4 h3").text(`${knkData.data[0].attributes.titles.ja_jp}`)
+    $(".manga4 h4").text(`${knkData.data[0].attributes.titles.en}`);
+    $(".manga4 h3").text(`${knkData.data[0].attributes.titles.ja_jp}`);
 }
 
 // Acts as the main function where all the code goes
@@ -309,23 +290,17 @@ async function RunAsync() {
     Loading();
 
     // Responsiveness
-    const ipad = window.matchMedia("(max-width: 768px)")
+    const ipad = window.matchMedia("(max-width: 768px)");
     Ipad768px(ipad, haikyuu, hxh, dna, yoi, apotheosis, tog, sl, knk);
     ipad.addListener(Ipad768px);
 }
 
 // Run the functions
-RunAsync()
+RunAsync();
 
 // Media Query
 function Ipad768px(x, haikyuu, hxh, dna, yoi, apotheosis, tog, sl, knk) {
-    if (x.matches) {
-        // Section 1
-        $(".social1 img").attr("src", "followIMG/instagramSmall.png")
-        $(".social2 img").attr("src", "followIMG/linkedinSmall.png")
-        $(".social3 img").attr("src", "followIMG/telegramSmall.png")
-
-        function InsertAnimeHTML(haikyuuData, hxhData, dnaData, yoiData, apotheosisData, togData, slData, knkData) {
+  function InsertAnimeHTML(haikyuuData, hxhData, dnaData, yoiData, apotheosisData, togData, slData, knkData) {
             // Anime
             $(".anime1 img").attr("src", `${haikyuuData.data[0].attributes.posterImage.small}`);
             $(".anime2 img").attr("src", `${hxhData.data[0].attributes.posterImage.small}`);
@@ -338,12 +313,18 @@ function Ipad768px(x, haikyuu, hxh, dna, yoi, apotheosis, tog, sl, knk) {
             $(".manga3 img").attr("src", `${slData.data[0].attributes.posterImage.small}`);
             $(".manga4 img").attr("src", `${knkData.data[0].attributes.posterImage.small}`);
         }
+  
+    if (x.matches) {
+        // Section 1
+        $(".social1 img").attr("src", "followIMG/instagramSmall.png");
+        $(".social2 img").attr("src", "followIMG/linkedinSmall.png");
+        $(".social3 img").attr("src", "followIMG/telegramSmall.png");
         
         InsertAnimeHTML(haikyuu, hxh, dna, yoi, apotheosis, tog, sl, knk);
     }
     else {
-        $(".social1 img").attr("src", "followIMG/instagram.png")
-        $(".social2 img").attr("src", "followIMG/linkedin.png")
-        $(".social3 img").attr("src", "followIMG/telegram.png")
+        $(".social1 img").attr("src", "followIMG/instagram.png");
+        $(".social2 img").attr("src", "followIMG/linkedin.png");
+        $(".social3 img").attr("src", "followIMG/telegram.png");
     }
 }

@@ -230,8 +230,42 @@ All in all, the anime list page is completed with the responsiveness fully done.
     * API used to display client spotify information or user information required for the website
 
 ## Testing
-### For commit 1.0:
+### For commit 1.0 - 1.4:
 I had an issue trying to retrieve the data from the async function as it kept returning a promise instead of a value when I console log it. After a bit of research I realised that in order to retrieve the value of the async function I need to call the async function inside of another async function, similar to that of wrapping. Though i'm still need super clear on the full reasoning behind this, I at least understand a slight bit more on how to retrieve API values now.
+
+Other than that, there were'nt any issues that I faced while testing and running the code.
+
+### For commit 2.0 - 2.3:
+I had issues with the text animation span division at the start as it wouldn't merge no matter what I tried to do in the CSS. After a while of messing with the CSS code, I fixed the issue which was due to duplicate code.
+
+I had a bit of trouble at first with the carousell because when I trade to add the fade property to the carousel, it would always teleport in from the left-most side of the page into the centre because I centred the carousel as well as decreased its size a small bit. The only solution I could come up with truly was to not implement the fade property to the carousel. In the end, the carousel still looks pretty good.
+
+For responsiveness the main issue was the glitch text, due to the positioning of the span elements. It moved more than the original if it was on a large screen device, but on the phone the span was all over the place. I tried my best to adjust the positioning so that the glitch still looks ok and not that distorted.
+
+### For commit 3.0 - 3.5:
+So at the start, I had issues fitting the images into the page because they were too big. The solution I came up with was to crop the images accordingly to 16:9 so that it would fit the page. After that I would just resize the image accordingly to fit the format.
+
+For the awards section, I kept trying to use bootstrap's card component but it just wouldn't fit well with the page and I kept having issues with the cards, in terms of its css and its formatting, thus I decided to stick with the flexbox method of layouting.
+
+The progress bar I did have some issues at the start because of the width of the progress bar and text container not staying constant. I had to 'justify-content: space-between' to make sure that they are spaced out evenly. Other than that there were no issues in the responsiveness either.
+
+### For commit 4.0 - 4.2:
+For the follow me page the main issues I had was the displaying of the images. At first, I kept thinking that the images were split apart, but soon found out that it was already together. So I had to recode a small part of the javascript code.
+
+During the HTML Validation, I had to CSS the iframe for the spotify embedding of playlists. I could not find out how to resolve the issue as the songs are not displaying. However, you can still play the playlists regularly, so I just decided to keep it in though I hope to fix this issue soon.
+
+Other than that, there were no issues faced during responsiveness and the other sections below while coding or testing.
+
+### For commit 5.0:
+For these few commits, I didn't have much of an issue as I was familiar with the usage of APIs already. However, I did come to find that the Kitsu API would take much longer than the Spotify API to load, hence, I decided to use Bootstrap's loading spinner in place to tell viewers that the API is still loading. Once loaded, I would use javascript to hide the division that holds the loading spinner.
+
+The responsiveness was a smooth trip and I did not have any issues with coding it or testing it.
+
+### For commit 6.0:
+This is the final version of the webpage for now, though there may be more updates in the future.
+
+### Code Validation:
+I have 0 errors for the HTML as I have cleaned up all the possible errors from the validation. 0 errors for CSS as well and 0 errors for Javascript. Though JSHint did notice me that I had undefined jquery variables in the functions where I use template literals often. I'm assuming that it is undefined due to the fact that the data has yet to be passed through the function parameters. All in all, the webpage is error free.
 
 ### Main Web Browsers Tested On:
 * Microsoft Edge

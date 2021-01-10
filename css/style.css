@@ -12,8 +12,7 @@
 }
 
 /* Home Page CSS */
-
-#navText {
+.navbar > li > a {
     color: white;
     transition: 0.15s ease-in;
     padding-left: 50px;
@@ -22,10 +21,6 @@
 #navBrand {
     color: white;
     transition: 0.15s ease-in;
-}
-
-#navText:hover {
-    color: rgb(107, 68, 242);
 }
 
 #navBrand:hover {
@@ -54,6 +49,7 @@
     background-image: url('../homeIMG/pic1.gif');
     background-repeat: no-repeat;
     background-size: cover;
+    user-select: none;
 }
 
 .homeImgTitle {
@@ -66,7 +62,7 @@
     width: 70%;
 
     font-family: 'Poppins', sans-serif;
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 30px;
     letter-spacing: 5px;
     color: #fff;
@@ -85,6 +81,7 @@
     background-attachment: fixed;
     background-position: center;
     color: #fff;
+    user-select: none;
 }
 
 .aboutContainer {
@@ -248,6 +245,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    user-select: none;
 }
 
 .accoladesContainer {
@@ -365,19 +363,19 @@
     text-align: center;
 }
 
-#awardImg {
+.award > img {
     width: 80%;
     height: auto;
     border: 4px solid rgba(212, 175, 55, 0.7);
     border-radius: 20px;
 }
 
-#awardTitle {
+.award > h3 {
     color: rgba(212, 175, 55);
     font-size: 40px;
 }
 
-#awardText {
+.award > p {
     color: #fff;
     width: 68%;
     font-size: 23px;
@@ -535,6 +533,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    user-select: none;
 }
 
 /* Section 1 */
@@ -560,28 +559,26 @@
     color: rgba(34, 229, 199, 0.9);
 }
 
-#socialImg {
+.social1 > a > img, .social2 > a > img, .social3 > a > img {
     border: 3px solid #fff;
     border-radius: 100%;
 
     transition: 0.4s ease;
 }
 
-#socialImg:hover {
+.social1:hover img, .social2:hover img, .social3:hover img {
     background-color: rgba(34, 229, 199, 0.5);
 }
 
-#socialText {
+.social1 > a, .social2 > a {
     text-decoration: none;
+}
+
+.social1 > a > h4, .social2 > a > h4 {
     text-align: center;
     margin-top: 2vh;
     font-size: 30px;
-}
-
-#socialText > h4 {
-    margin-top: 2vh;
-    font-size: 30px;
-    color: rgba(34, 229, 199, 0.9);
+    color: rgba(34, 229, 199);
 }
 
 .social3 > h4 {
@@ -690,6 +687,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    user-select: none;
 }
 
 .animeContainer {
@@ -719,7 +717,7 @@
 }
 
 
-#animeItems {
+.anime1, .anime2, .anime3, .anime4 {
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
@@ -749,7 +747,7 @@
 /* For Ipad Pro Responsiveness*/
 @media screen and (max-width: 1024px) {
     /* Home Page Responsiveness */
-    #navText {
+    .nav-item > a {
         text-align: center;
         font-size: 25px;
     }
@@ -844,16 +842,16 @@
         margin-bottom: 40px;
     }
 
-    #awardImg {
+    .award > img {
         border: 4px solid rgba(212, 175, 55, 0.7);
     }
 
-    #awardTitle {
+    .award > h3 {
         font-size: 35px;
         width: 100%;
     }
 
-    #awardText {
+    .award > p {
         font-size: 22px;
         width: 100%;
     }
@@ -893,6 +891,18 @@
         margin-top: 4vh;
     }
 
+    #pantryHeader {
+        margin-top: 4vh;
+    }
+
+    #opusHeader {
+        margin-top: 4vh;
+    }
+
+    #bopsHeader {
+        margin-top: 4vh;
+    }
+
     .artistSong {
         flex-wrap: wrap;
     }
@@ -914,7 +924,7 @@
         width: 100%;
     }
 
-    #songText {
+    .song1Text, song2Text, song3Text {
         width: 25%;
     }
 
@@ -935,7 +945,7 @@
 
 /* For Bootstrap Responsiveness */
 @media screen and (max-width: 991px) {
-    #navText {
+    .nav-item > a {
         text-align: center;
         padding: 0px;
         font-size: 20px;
@@ -964,7 +974,8 @@
         border-radius: 35px;
     }
 
-    #navText {
+    .nav-item > a {
+        text-align: center;
         font-size: 24px;
         margin-top: 15px;
         margin-bottom: 15px;
@@ -1049,16 +1060,16 @@
         margin-bottom: 50px;
     }
 
-    #awardImg {
+    .award > img {
         border: 4px solid rgba(212, 175, 55, 0.7);
     }
 
-    #awardTitle {
+    .award > h3 {
         font-size: 40px;
         width: 100%;
     }
 
-    #awardText {
+    .award > p {
         font-size: 25px;
         width: 100%;
     }
@@ -1189,7 +1200,8 @@
         border-radius: 35px;
     }
 
-    #navText {
+    .nav-item > a {
+        text-align: center;
         margin-top: 15px;
         margin-bottom: 15px;
     }
@@ -1314,16 +1326,16 @@
         margin-bottom: 20px;
     }
 
-    #awardImg {
+    .award > img {
         border: 3px solid rgba(212, 175, 55, 0.7);
     }
 
-    #awardTitle {
+    .award > h3 {
         font-size: 30px;
         width: 100%;
     }
 
-    #awardText {
+    .award > p {
         font-size: 16px;
         width: 100%;
     }
@@ -1376,6 +1388,21 @@
         font-size: 30px;
     }
 
+    #pantryHeader {
+        margin-top: 6vh;
+        font-size: 30px;
+    }
+
+    #opusHeader {
+        margin-top: 6vh;
+        font-size: 30px;
+    }
+
+    #bopsHeader {
+        margin-top: 6vh;
+        font-size: 30px;
+    }
+
     .playlistText {
         font-size: 25px;
     }
@@ -1391,6 +1418,13 @@
 
     .playlist3 {
         margin-top: 6vh;
+    }
+    
+    .iframe {
+        width: 300px;
+        height: 380px;
+        border: none;
+        background-color: transparent;
     }
     
     /* Section 3 */
@@ -1467,7 +1501,7 @@
         text-align: center;
     }
 
-    #animeItems {
+    .anime1, .anime2, .anime3, .anime4 {
         width: 100%;
         margin-top: 4vh;
     }
