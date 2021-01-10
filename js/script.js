@@ -300,7 +300,7 @@ RunAsync();
 
 // Media Query
 function Ipad768px(x, haikyuu, hxh, dna, yoi, apotheosis, tog, sl, knk) {
-  function InsertAnimeHTML(haikyuuData, hxhData, dnaData, yoiData, apotheosisData, togData, slData, knkData) {
+    function InsertAnimeHTML(haikyuuData, hxhData, dnaData, yoiData, apotheosisData, togData, slData, knkData) {
             // Anime
             $(".anime1 img").attr("src", `${haikyuuData.data[0].attributes.posterImage.small}`);
             $(".anime2 img").attr("src", `${hxhData.data[0].attributes.posterImage.small}`);
